@@ -1,0 +1,1 @@
+document.querySelector(".btn-search").addEventListener("click", () => { alert("Searching for available rooms..."); });

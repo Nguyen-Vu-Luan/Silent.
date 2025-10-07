@@ -1,0 +1,79 @@
+.reserve {
+    background-color: #b5a189;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.reserve-bg {
+    position: relative;
+    width: 70%;
+    max-width: 650px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 350px;
+}
+
+.reserve-bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    max-height: 350px;
+}
+
+.reserve-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px 40px;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reserve-box h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #000;
+}
+
+.reserve-box p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin: 15px 0;
+}
+
+.reserve-box .line {
+    height: 1px;
+    background-color: #6e5a48;
+    width: 100%;
+    margin: 8px 0;
+}
+
+@media(max-width: 768px) {
+    .reserve-bg {
+        width: 90%;
+        height: 250px;
+    }
+
+    .reserve-box {
+        padding: 15px 20px;
+        max-width: 90%;
+    }
+
+    .reserve-box h3 {
+        font-size: 16px;
+    }
+
+    .reserve-box p {
+        font-size: 13px;
+    }
+}

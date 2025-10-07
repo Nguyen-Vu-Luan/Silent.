@@ -1,0 +1,368 @@
+.checkout-section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.checkout-header {
+    text-align: center;
+}
+
+.checkout-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+form.checkout-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: #fffaf3;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-main {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group-section {
+    background: #fdf8ef;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e0d5c0;
+}
+
+.form-group-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e0d5c0;
+    padding-bottom: 0.3rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0d5c0;
+}
+
+.quantity-stepper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-stepper button {
+    background: #e6dccb;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.quantity-stepper button:hover {
+    background: #d2c0a3;
+}
+
+.quantity-stepper input {
+    width: 35px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-field.full-width {
+    flex: 1 1 100%;
+}
+
+.price-summary {
+    background: #faf6ee;
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: #3b2f1f;
+}
+
+.price-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8c9b2;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.price-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.price-header .price-total strong {
+    font-size: 1rem;
+    color: #3b2f1f;
+}
+
+.price-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-item.points {
+    color: #6a4e2d;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.booking-summary-card {
+    background: #fdf8ef;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e0d5c0;
+    transition: opacity 0.3s ease;
+}
+
+.booking-summary-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 0.7rem;
+    object-fit: cover;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.submit-btn {
+    background: #3b2f1f;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #5a4425;
+}
+
+.form-full-width {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.checkout-section {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.checkout-section.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close-checkout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #6e5a48;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.close-checkout:hover {
+    background: #8a725e;
+}
+
+.chat-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #6e5a48;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 9999;
+    /* đảm bảo nổi trên mọi thứ */
+    transition: background 0.3s, transform 0.3s;
+}
+
+.chat-bubble:hover {
+    background: #8a725e;
+    transform: scale(1.1);
+}
+
+/* Nút chat */
+.chat-bubble {
+    position: fixed;
+    bottom: 100px;
+    /* nâng lên một chút để nhường chỗ nút scroll */
+    right: 30px;
+    background: #6e5a48;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 9999;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.chat-bubble:hover {
+    background: #8a725e;
+    transform: scale(1.1);
+}
+
+/* Nút scroll to top */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    /* nằm dưới nút chat */
+    right: 30px;
+    background: #6e5a48;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9998;
+}
+
+.scroll-top:hover {
+    background: #8a725e;
+    transform: scale(1.1);
+}
+
+/* Hiện nút khi cuộn xuống */
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #f5f0e6;
+  color: #6e5a48;
+  padding: 14px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.toast.loading::before { content: "⏳ "; }
+.toast.success::before { content: "✨ "; }
+.toast.error::before { content: "⚠️ "; }
