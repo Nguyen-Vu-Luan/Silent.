@@ -1,0 +1,155 @@
+.room-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-family: "Poppins", sans-serif;
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.room-title {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+.btn-book {
+    background-color: #6a5244;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    background-color: #8a6c5b;
+}
+
+.room-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.room-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slider-images img {
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+    height: 400px;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.slider-images img.active {
+    display: block;
+    opacity: 1;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 25px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: rgba(150, 120, 100, 0.9);
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+.room-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.room-features li {
+    font-size: 16px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3a2f2a;
+}
+
+.more-link {
+    color: #6a5244;
+    text-decoration: underline;
+}
+
+.room-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6a5244;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .room-container {
+        grid-template-columns: 1fr;
+    }
+
+    .slider-images img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .room-title {
+        font-size: 30px;
+    }
+
+    .btn-book {
+        font-size: 14px;
+    }
+
+    .slider-btn {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .room-title {
+        font-size: 26px;
+    }
+
+    .room-price {
+        text-align: center;
+    }
+
+    .btn-book {
+        width: 100%;
+    }
+}
